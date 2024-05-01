@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  padding: 1rem 6.5rem;
+  width: 100%;
+  background-color: #222;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.header__title {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav-links {
+  margin-right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+.header__nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+.header__nav-link:hover {
+  color: #ff5733;
+}
+.header__nav-social {
+  display: flex;
+}
+.header__nav-social i {
+  padding-right: 30px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+}
+.header__nav-social i:hover {
+  color: #ff5733;
+}
+
+.banner {
+  height: 100vh;
+  background-image: url("/assets/bg.jpg");
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+.banner__overlay {
+  height: 100%;
+  background-color: #171819;
+  opacity: 0.85;
+}
+.banner__content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.banner__content-intro {
+  margin-bottom: 1.4rem;
+  font-size: 1.3rem;
+  color: #7f8c8d;
+}
+.banner__content-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.banner__btns {
+  margin-top: 2rem;
+}
+.banner__btn {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.banner__btn-start {
+  padding: 0.9rem 1.6rem;
+  font-weight: 500;
+  color: #fff;
+}
+.banner__btn-start:hover {
+  color: #ff5733;
+}
+.banner__btn-learn {
+  padding: 0.9rem 1.6rem;
+  font-weight: 500;
+  border: 1px solid #ff5733;
+  border-radius: 3px;
+  color: #ff5733;
+}
+.banner__btn-learn:hover {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
