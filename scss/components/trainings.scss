@@ -1,0 +1,102 @@
+.trainings {
+  padding: 3rem 8rem;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-white;
+
+  &__intro {
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
+    color: $color-grey-medium;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $color-black-dark;
+  }
+
+  &__cards {
+    flex: 55%;
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+.training {
+  width: 33%;
+  height: auto;
+  background-color: $color-white;
+  box-shadow: 
+    0 1.6px 3.6px rgba(0, 0, 0, 0.1),
+    0 4.4px 10px rgba(0, 0, 0, 0.015),
+    0 10.6px 24.1px rgba(0, 0, 0, 0.02),
+    0 35px 80px rgba(0, 0, 0, 0.03);
+
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__details {
+    padding: 5px 20px 10px 20px;
+
+    &-info {
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+      
+
+      h4 {
+        font-size: 1.7rem;
+        color: $color-black-light;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: $color-grey-dark;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &-price {
+      h5 {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 3.5rem;
+        text-align: center;
+        border-radius: 50%;
+        color: $color-white;
+        background-color: #ff5733;
+      }
+    }
+
+    &-coach {
+      font-size: 1.1rem;
+      text-align: justify;
+      color: $color-grey-dark;
+    }
+
+  }
+}

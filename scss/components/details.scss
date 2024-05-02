@@ -1,0 +1,80 @@
+.details {
+  padding: 8rem 15rem;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $color-black-light;
+
+  &__content {
+    padding-right: 4rem;
+    flex: 45%;
+    display: flex;
+    flex-direction: column;
+
+    &-title,
+    &-info,
+    &-text {
+      color: $color-white;
+    }
+
+    &-title {
+      padding-bottom: 1.1rem;
+      font-size: 2.5rem;
+    }
+
+    &-info {
+      padding-bottom: 1.2rem;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    &-text {
+      padding-bottom: 3rem;
+      font-size: 1.2rem;
+      text-align: justify;
+      color: $color-grey-dark;
+    }
+
+    &-link {
+      padding: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      border: 1px solid $color-active;
+      border-radius: 3px;
+      color: $color-active;
+
+      &:hover {
+        background-color: $color-active;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__hours {
+    padding-left: 4rem;
+    flex: 45%;
+    border-left: 1px solid $color-grey-dark;
+
+    &-title {
+      padding-bottom: 2.5rem;
+      font-size: 2.5rem;
+      color: $color-white;
+    }
+
+    &-days {
+      font-size: 1.1rem;
+      color: $color-white;
+    }
+
+    &-time {
+      margin-bottom: 1.6rem;
+      font-size: 1.1rem;
+      color: $color-grey-dark;
+    }
+  }
+}

@@ -1,6 +1,10 @@
 @import './fonts.scss';
 @import './reset.scss';
 @import './variables.scss';
-@import './header.scss';
-@import './banner.scss';
-@import './details.scss';
+@import './components/header.scss';
+@import './components/banner.scss';
+@import './components/details.scss';
+@import './components/team.scss';
+@import './components/trainings.scss';
+@import './components/contacts.scss';
+@import './components/footer.scss';

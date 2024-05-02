@@ -1,0 +1,77 @@
+.team {
+  padding: 8rem;
+  height: 100vh;
+  background-color: $color-white-grey;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__about {
+    margin-right: 3rem;
+    flex: 39%;
+
+    &-title {
+      padding-bottom: 1.8rem;
+      font-size: 2.1rem;
+      color: $color-black-light;
+    }
+
+    &-content {
+      font-size: 1.1rem;
+      text-align: justify;
+      color: $color-grey-light;
+    }
+  }
+
+  &__coaches {
+    flex: 55%;
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__coach {
+    width: 45%;
+    height: auto;
+    background-color: $color-white;
+    box-shadow: 
+      0 1.6px 3.6px rgba(0, 0, 0, 0.1),
+      0 4.4px 10px rgba(0, 0, 0, 0.015),
+      0 10.6px 24.1px rgba(0, 0, 0, 0.02),
+      0 35px 80px rgba(0, 0, 0, 0.03);
+
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-name,
+    &-position {
+      padding: 5px 20px 0 20px;
+      display: flex;
+      justify-content: space-between;
+
+      h4 {
+        font-size: 1.5rem;
+        color: $color-black-light;
+      }
+
+      i {
+        font-size: 1.3rem;
+        font-weight: bolder;
+        color: $color-grey-dark;
+        cursor: pointer;
+      }
+    }
+
+    &-name i {
+      align-self: center;
+    }
+
+    &-position p {
+      padding-bottom: 15px;
+      color: $color-grey-dark;
+    }
+  }
+}
