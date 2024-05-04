@@ -1,3 +1,4 @@
+// trainings styles
 .trainings {
   padding: 3rem 8rem;
   height: 100vh;
@@ -26,14 +27,14 @@
   }
 
   &__cards {
-    flex: 55%;
+    flex: 0 1 55%;
     display: flex;
     gap: 3rem;
   }
 }
 
 .training {
-  width: 33%;
+  flex: 0 1 33%;
   height: auto;
   background-color: $color-white;
   box-shadow: 
@@ -50,6 +51,7 @@
 
   &__details {
     padding: 5px 20px 10px 20px;
+    
 
     &-info {
       padding-bottom: 10px;
@@ -62,7 +64,6 @@
       display: flex;
       flex-direction: column;
       
-
       h4 {
         font-size: 1.7rem;
         color: $color-black-light;
@@ -98,5 +99,146 @@
       color: $color-grey-dark;
     }
 
+  }
+}
+
+// trainings media styles
+@include laptop{
+  .trainings {
+    padding: 4rem 2rem;
+
+    &__intro {
+      padding-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    &__title {
+      padding-bottom: 4rem;
+      font-size: 2rem;
+    }
+  }
+
+  .training {
+    &__details {
+      padding: 5px;
+
+      &-info {
+        padding-bottom: 7px;
+      }
+
+      &-name {
+        padding: 5px;
+
+        h4 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      &-price {
+        h5 {
+          width: 2.5rem;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          font-size: 0.8rem;
+        }
+      }
+
+      &-coach {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .trainings {
+    padding: 2rem;
+    height: initial;
+    justify-content: flex-start;
+
+    &__intro {
+      padding-bottom: 0.1rem;
+      font-size: 1rem;
+    }
+
+    &__title {
+      padding-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    &__cards {
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .training {
+    max-width: 30rem;
+
+    &__details {
+      padding: 5px;
+
+      &-info {
+        padding-bottom: 0px;
+      }
+
+      &-name {
+        padding: 0px 0px 5px 0px;
+
+        h4 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+
+      &-price {
+        h5 {
+          width: 2.5rem;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          font-size: 0.8rem;
+        }
+      }
+
+      &-coach {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .training {
+    &__details {
+      padding: 5px;
+
+      &-info {
+        padding-bottom: 0px;
+      }
+
+      &-name {
+        padding: 0px 0px 5px 0px;
+
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+
+      &-coach {
+        font-size: 0.9rem;
+      }
+    }
   }
 }
