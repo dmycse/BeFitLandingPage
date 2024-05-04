@@ -1,5 +1,6 @@
+// team styles
 .team {
-  padding: 8rem;
+  padding: 6rem;
   height: 100vh;
   background-color: $color-white-grey;
   
@@ -8,7 +9,7 @@
   align-items: center;
 
   &__about {
-    margin-right: 3rem;
+    margin-right: 6rem;
     flex: 39%;
 
     &-title {
@@ -25,13 +26,13 @@
   }
 
   &__coaches {
-    flex: 55%;
+    flex: 0 1 55%;
     display: flex;
     gap: 3rem;
   }
 
   &__coach {
-    width: 45%;
+    flex: 0 1 45%;
     height: auto;
     background-color: $color-white;
     box-shadow: 
@@ -72,6 +73,132 @@
     &-position p {
       padding-bottom: 15px;
       color: $color-grey-dark;
+    }
+  }
+}
+
+// team media styles
+@include desktop{
+  .team {
+    padding: 2rem;
+
+    &__about {
+      margin-right: 2.5rem;
+      flex: 0 1 50%;
+
+      &-title {
+        padding-bottom: 1.4rem;
+        font-size: 2.2rem;
+      }
+
+      &-content {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
+@include laptop{
+  .team {
+    padding: 2rem;
+    height: initial;
+    flex-direction: column;
+    
+
+    &__about {
+      margin: 0px 0px 20px 0px;
+
+      &-title {
+        padding-bottom: 1.4rem;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+
+      &-content {
+        font-size: 1rem;
+      }
+    }
+
+    &__coaches {
+      max-width: 50rem;
+      gap: 2rem;
+    }
+
+    &__coach {
+      flex: 0 1 48%;
+
+      &-name {
+        padding: 5px 10px 0 10px;
+
+        h4 {
+          font-size: 1.1rem;
+        }
+
+        i {
+          font-size: 0.9rem;
+        }
+      }
+
+      &-position {
+        padding: 5px 10px 0 10px;
+
+        p {
+          font-size: 0.9rem;
+        }
+
+        i {
+          padding-top: 5px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@include tablet{
+  .team {
+    &__about {
+
+      &-title {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@include mobile{
+  .team {
+
+    &__about {
+      &-title {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+
+    &__coaches {
+      max-width: 25rem;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &__coach {
+      &-name,
+      &-position {
+    
+        h4 {
+          font-size: 1.8rem;
+        }
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+
+      &-position p {
+        font-size: 1rem;
+      }
     }
   }
 }
