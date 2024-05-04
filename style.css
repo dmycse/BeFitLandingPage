@@ -52,7 +52,73 @@
 .header__nav-social i:hover {
   color: #ff5733;
 }
+.header #bars {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  color: #ff5733;
+  cursor: pointer;
+  display: none;
+}
 
+@media (max-width: 1200px) {
+  .header {
+    padding: 1rem 4.5rem;
+  }
+  .header__nav-links {
+    margin-right: 30px;
+    gap: 25px;
+  }
+  .header__nav-link {
+    font-size: 1rem;
+  }
+  .header-social {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem 3rem;
+  }
+  .header__title {
+    font-size: 1.6rem;
+  }
+  .header__nav {
+    margin-top: 4.4rem;
+    padding: 20px 0px 20px;
+    width: 250px;
+    height: 42vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s;
+  }
+  .header__nav-links {
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .header__nav-social {
+    padding-left: 20px;
+  }
+  .header #bars {
+    display: initial;
+    transition: color 0.7s;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 1rem;
+  }
+  .header__title {
+    font-size: 1.4rem;
+  }
+}
 .banner {
   height: 100vh;
   background-image: url("/assets/bg.jpg");
@@ -91,12 +157,15 @@
   text-transform: uppercase;
 }
 .banner__btn-start {
+  margin-right: 10px;
   padding: 0.9rem 1.6rem;
   font-weight: 500;
+  border: 1px solid #fff;
   color: #fff;
 }
 .banner__btn-start:hover {
-  color: #ff5733;
+  background-color: #ff5733;
+  border: 1px solid transparent;
 }
 .banner__btn-learn {
   padding: 0.9rem 1.6rem;
@@ -110,8 +179,56 @@
   color: #fff;
 }
 
+@media (max-width: 1200px) {
+  .banner__content-intro {
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+  }
+  .banner__content-title {
+    font-size: 2.5rem;
+  }
+  .banner__btns {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .banner__btn {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+  .banner__btn-start, .banner__btn-learn {
+    padding: 0.7rem 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .banner__content {
+    padding: 2rem;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .banner__content-intro {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .banner__content-title {
+    font-size: 2rem;
+  }
+  .banner__btns {
+    margin-top: 1.5rem;
+  }
+  .banner__btn {
+    font-size: 0.9rem;
+  }
+  .banner__btn-start, .banner__btn-learn {
+    padding: 0.7rem 1.4rem;
+    margin-right: 0px;
+  }
+}
 .details {
-  padding: 8rem 15rem;
+  padding: 8rem 10rem;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -120,7 +237,7 @@
   background-color: #171819;
 }
 .details__content {
-  padding-right: 4rem;
+  padding-right: 2rem;
   flex: 45%;
   display: flex;
   flex-direction: column;
@@ -133,11 +250,12 @@
   font-size: 2.5rem;
 }
 .details__content-info {
-  padding-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .details__content-text {
+  margin-top: 1.2rem;
   padding-bottom: 3rem;
   font-size: 1.2rem;
   text-align: justify;
@@ -176,8 +294,105 @@
   color: #666262;
 }
 
+@media (max-width: 1200px) {
+  .details {
+    padding: 6rem;
+  }
+  .details__content {
+    flex: 50%;
+  }
+  .details__content-title {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  .details__content-text {
+    font-size: 1rem;
+  }
+  .details__content-link {
+    font-size: 0.9rem;
+  }
+  .details__hours-title {
+    font-size: 2rem;
+  }
+  .details__hours-days, .details__hours-time {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .details {
+    padding: 3rem;
+  }
+  .details__content {
+    flex: 50%;
+  }
+  .details__content-title {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  .details__content-text {
+    padding-bottom: 2.2rem;
+    font-size: 1rem;
+  }
+  .details__content-link {
+    font-size: 0.9rem;
+  }
+  .details__hours-title {
+    font-size: 2rem;
+  }
+  .details__hours-days, .details__hours-time {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .details {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .details__content {
+    padding-right: 0;
+    align-items: center;
+  }
+  .details__content-title {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .details__content-info {
+    padding-bottom: 0.4rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .details__content-text {
+    padding-bottom: 1.8rem;
+    font-size: 1rem;
+  }
+  .details__content-link {
+    font-size: 0.9rem;
+  }
+  .details__hours {
+    padding-left: 0;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .details__hours-title {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  .details__hours-days, .details__hours-time {
+    font-size: 1rem;
+  }
+  .details__hours-tine {
+    margin-bottom: 1.4rem;
+  }
+  .details__hours-time:last-child {
+    margin-bottom: 0;
+  }
+}
 .team {
-  padding: 8rem;
+  padding: 6rem;
   height: 100vh;
   background-color: #f9f9f9;
   display: flex;
@@ -185,7 +400,7 @@
   align-items: center;
 }
 .team__about {
-  margin-right: 3rem;
+  margin-right: 6rem;
   flex: 39%;
 }
 .team__about-title {
@@ -199,12 +414,12 @@
   color: #7f8c8d;
 }
 .team__coaches {
-  flex: 55%;
+  flex: 0 1 55%;
   display: flex;
   gap: 3rem;
 }
 .team__coach {
-  width: 45%;
+  flex: 0 1 45%;
   height: auto;
   background-color: #fff;
   box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.1), 0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02), 0 35px 80px rgba(0, 0, 0, 0.03);
@@ -236,6 +451,91 @@
   color: #666262;
 }
 
+@media (max-width: 1200px) {
+  .team {
+    padding: 2rem;
+  }
+  .team__about {
+    margin-right: 2.5rem;
+    flex: 0 1 50%;
+  }
+  .team__about-title {
+    padding-bottom: 1.4rem;
+    font-size: 2.2rem;
+  }
+  .team__about-content {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .team {
+    padding: 2rem;
+    height: initial;
+    flex-direction: column;
+  }
+  .team__about {
+    margin: 0px 0px 20px 0px;
+  }
+  .team__about-title {
+    padding-bottom: 1.4rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .team__about-content {
+    font-size: 1rem;
+  }
+  .team__coaches {
+    max-width: 50rem;
+    gap: 2rem;
+  }
+  .team__coach {
+    flex: 0 1 48%;
+  }
+  .team__coach-name {
+    padding: 5px 10px 0 10px;
+  }
+  .team__coach-name h4 {
+    font-size: 1.1rem;
+  }
+  .team__coach-name i {
+    font-size: 0.9rem;
+  }
+  .team__coach-position {
+    padding: 5px 10px 0 10px;
+  }
+  .team__coach-position p {
+    font-size: 0.9rem;
+  }
+  .team__coach-position i {
+    padding-top: 5px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 767px) {
+  .team__about-title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .team__about-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .team__coaches {
+    max-width: 25rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .team__coach-name h4, .team__coach-position h4 {
+    font-size: 1.8rem;
+  }
+  .team__coach-name i, .team__coach-position i {
+    font-size: 1.5rem;
+  }
+  .team__coach-position p {
+    font-size: 1rem;
+  }
+}
 .trainings {
   padding: 3rem 8rem;
   height: 100vh;
@@ -260,13 +560,13 @@
   color: #222;
 }
 .trainings__cards {
-  flex: 55%;
+  flex: 0 1 55%;
   display: flex;
   gap: 3rem;
 }
 
 .training {
-  width: 33%;
+  flex: 0 1 33%;
   height: auto;
   background-color: #fff;
   box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.1), 0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02), 0 35px 80px rgba(0, 0, 0, 0.03);
@@ -316,6 +616,110 @@
   color: #666262;
 }
 
+@media (max-width: 1024px) {
+  .trainings {
+    padding: 4rem 2rem;
+  }
+  .trainings__intro {
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .trainings__title {
+    padding-bottom: 4rem;
+    font-size: 2rem;
+  }
+  .training__details {
+    padding: 5px;
+  }
+  .training__details-info {
+    padding-bottom: 7px;
+  }
+  .training__details-name {
+    padding: 5px;
+  }
+  .training__details-name h4 {
+    font-size: 1.2rem;
+  }
+  .training__details-name p {
+    font-size: 1rem;
+  }
+  .training__details-price h5 {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.8rem;
+  }
+  .training__details-coach {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .trainings {
+    padding: 2rem;
+    height: initial;
+    justify-content: flex-start;
+  }
+  .trainings__intro {
+    padding-bottom: 0.1rem;
+    font-size: 1rem;
+  }
+  .trainings__title {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  .trainings__cards {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .training {
+    max-width: 30rem;
+  }
+  .training__details {
+    padding: 5px;
+  }
+  .training__details-info {
+    padding-bottom: 0px;
+  }
+  .training__details-name {
+    padding: 0px 0px 5px 0px;
+  }
+  .training__details-name h4 {
+    font-size: 1.2rem;
+  }
+  .training__details-name p {
+    font-size: 0.8rem;
+  }
+  .training__details-price h5 {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.8rem;
+  }
+  .training__details-coach {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .training__details {
+    padding: 5px;
+  }
+  .training__details-info {
+    padding-bottom: 0px;
+  }
+  .training__details-name {
+    padding: 0px 0px 5px 0px;
+  }
+  .training__details-name h4 {
+    font-size: 1.5rem;
+  }
+  .training__details-name p {
+    font-size: 0.9rem;
+  }
+  .training__details-coach {
+    font-size: 0.9rem;
+  }
+}
 .contact {
   padding: 8rem;
   height: 100vh;
@@ -341,6 +745,7 @@
 .contact__form-details textarea {
   width: 100%;
   padding: 15px;
+  font-size: 1.1rem;
   border: 1px solid #666262;
   outline: none;
 }
@@ -358,6 +763,7 @@
   padding: 15px 0;
   width: 100%;
   font-size: 1.1rem;
+  text-transform: uppercase;
   background-color: #171819;
   border: none;
   outline: none;
@@ -365,9 +771,8 @@
   cursor: pointer;
 }
 .contact__form-details button:hover {
-  background-color: #fff;
-  border: 2px solid #ff5733;
-  color: #ff5733;
+  background-color: #ff5733;
+  color: #fff;
 }
 .contact__map {
   flex: 0 0 45%;
@@ -378,7 +783,7 @@
   color: #171819;
 }
 .contact__map p {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   font-size: 1.1rem;
 }
 .contact__map p i {
@@ -387,9 +792,83 @@
 }
 .contact__map iframe {
   width: 100%;
-  height: 83%;
+  height: 100%;
+  max-height: 100%;
 }
 
+@media (max-width: 1200px) {
+  .contact__form h2 {
+    font-size: 1.9rem;
+  }
+  .contact__map h2 {
+    font-size: 1.9rem;
+  }
+  .contact__map p {
+    font-size: 1rem;
+  }
+  .contact__map iframe {
+    height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .contact {
+    padding: 6rem;
+  }
+  .contact__form h2 {
+    padding-bottom: 7px;
+    font-size: 1.4rem;
+  }
+  .contact__form-details input,
+  .contact__form-details textarea {
+    padding: 12px;
+  }
+  .contact__map h2 {
+    font-size: 1.4rem;
+  }
+  .contact__map p {
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+  }
+  .contact__map p i {
+    padding-right: 2px;
+  }
+  .contact__map iframe {
+    height: 87%;
+  }
+}
+@media (max-width: 767px) {
+  .contact {
+    padding: 2rem;
+    flex-direction: column;
+    height: initial;
+  }
+  .contact__form h2 {
+    font-size: 1.5rem;
+  }
+  .contact__form-details {
+    margin-bottom: 15px;
+  }
+  .contact__form-details textarea {
+    height: 15vh;
+  }
+  .contact__form-details input::placeholder,
+  .contact__form-details textarea::placeholder {
+    font-size: 0.8rem;
+  }
+  .contact__form-details button {
+    margin-left: auto;
+    padding: 10px;
+    width: 30%;
+    font-size: 0.8rem;
+  }
+  .contact__map h2 {
+    font-size: 1.5rem;
+  }
+  .contact__map p {
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+}
 .footer {
   padding: 4rem 8rem;
   display: flex;
@@ -403,6 +882,35 @@
 .footer__contact i {
   padding-right: 5px;
   color: #ff5733;
+}
+.footer__contact-email, .footer__contact-tel {
+  text-decoration: none;
+  color: #7f8c8d;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 6rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 1rem;
+  }
+  .footer__copyright p, .footer__contact p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .footer {
+    justify-content: center;
+  }
+  .footer__copyright {
+    display: none;
+  }
+  .footer__contact p {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
