@@ -10,8 +10,8 @@
 <body>
   <header class="header">
     <h2 class="header__title">Be@Fit Fitness Studio</h2>
-    <nav class="header__nav">
-      <ul id="menu" class="header__nav-links">
+    <nav id="menu" class="header__nav">
+      <ul class="header__nav-links">
         <li><a href="#" class="header__nav-link">Home</a></li>
         <li><a href="#" class="header__nav-link">About Us</a></li>
         <li><a href="#" class="header__nav-link">Classes</a></li>
@@ -23,6 +23,7 @@
         <i class="fa fa-youtube-play" aria-hidden="true"></i>
       </div>
     </nav>
+    <i id="bars" class="fa fa-bars" aria-hidden="true"></i>
   </header>
   <main>
     <section class="banner">
@@ -39,7 +40,7 @@
     <section class="details">
       <article class="details__content">
         <h3 class="details__content-title">New to the Be@Fit?</h3>
-        <h6 class="details__content-info">Your membership is up to 2 months FREE <br> (&#8364;60 per month)</h6>
+        <h6 class="details__content-info">Your membership is up to 2 months FREE (&#8364;60 per month)</h6>
         <p class="details__content-text">The many years of experience and the impeccable professional training of our members, always combined with quality, consistency, pioneering and ethics, make Be@Fit one of the best Fitness and Well Being centers.</p>
         <a href="#" class="details__content-link">Become a member today</a>
       </article>
@@ -47,9 +48,9 @@
         <h3 class="details__hours-title">Working hours</h3>
         <h5 class="details__hours-days">Sunday: Closed</h5>
         <h5 class="details__hours-days">Monday - Thursday</h5>
-        <p class="details__hours-time">07:00 - 22:00</p>
-        <h5 class="details__hours-days">Friday - Saturday</h5>
         <p class="details__hours-time">07:00 - 23:00</p>
+        <h5 class="details__hours-days">Friday - Saturday</h5>
+        <p class="details__hours-time">08:00 - 00:00</p>
       </article>
     </section>
     <section class="team">
@@ -170,7 +171,7 @@
           <input type="text" name="" placeholder="Name">
           <input type="email" name="" placeholder="Email">
           <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-          <button type="submit">Send message</button>
+          <button type="submit">Send</button>
         </form>
       </article>
       <article class="contact__map">
@@ -196,10 +197,17 @@
         <p>Web Development by DMY</p>
       </article>
       <article class="footer__contact">
-        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> be@fit.fitness</p>
-        <p><i class="fa fa-phone" aria-hidden="true"></i>+1-315-7679874</p>
+        <p>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <a class="footer__contact-email" href="mailto:contact@befit.fitness">contact@befit.fitness</a> 
+        </p>
+        <p>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <a class="footer__contact-tel" href="tel:+13157679874">+1-315-7679874</a>
+        </p>
       </article>
     </footer>
   </main>
+  <script src="index.js"></script>
 </body>
 </html>

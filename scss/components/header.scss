@@ -55,4 +55,89 @@
       }
     }
   }
+
+  #bars {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: $color-active;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+// header media styles
+@include desktop {
+  .header {
+    padding: 1rem 4.5rem;
+
+    &__nav {
+      &-links {
+        margin-right: 30px;
+        gap: 25px;
+      }
+
+      &-link {
+        font-size: 1rem;
+      }
+    }
+
+    &-social {
+      padding-right: 20px;
+    }
+  }
+}
+
+@include laptop {
+  .header {
+    padding: 1rem 3rem;
+
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__nav {
+      margin-top: 4.4rem;
+      padding: 20px 0px 20px;
+      
+      width: 250px;
+      height: 42vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: fixed;
+      top: 0px;
+      right: -300px;
+      z-index: 100;
+
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: 0.6s;
+
+      &-links {
+        margin: 0px 0px 30px 0px;
+        text-align: center;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      &-social {
+        padding-left: 20px;
+    }
+  }
+
+    #bars {
+      display: initial;
+      transition: color 0.7s;
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    padding: 1rem;
+
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
 }
