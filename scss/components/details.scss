@@ -1,5 +1,6 @@
+// details styles
 .details {
-  padding: 8rem 15rem;
+  padding: 8rem 10rem;
   width: 100%;
   height: 100vh;
 
@@ -10,7 +11,7 @@
   background-color: $color-black-light;
 
   &__content {
-    padding-right: 4rem;
+    padding-right: 2rem;
     flex: 45%;
     display: flex;
     flex-direction: column;
@@ -27,12 +28,13 @@
     }
 
     &-info {
-      padding-bottom: 1.2rem;
+      padding-bottom: 0.4rem;
       font-weight: 400;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
 
     &-text {
+      margin-top: 1.2rem;
       padding-bottom: 3rem;
       font-size: 1.2rem;
       text-align: justify;
@@ -75,6 +77,140 @@
       margin-bottom: 1.6rem;
       font-size: 1.1rem;
       color: $color-grey-dark;
+    }
+  }
+}
+
+// details media styles
+@include desktop{
+  .details {
+    padding: 6rem;
+
+    &__content {
+      flex: 50%;
+
+      &-title {
+        padding-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      &-text {
+        font-size: 1rem;
+      }
+
+      &-link {
+        font-size: 0.9rem;
+      }
+    }
+
+    &__hours {
+  
+      &-title {
+        font-size: 2rem;
+      }
+  
+      &-days,
+      &-time {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
+@include laptop{
+  .details {
+    padding: 3rem;
+
+    &__content {
+      flex: 50%;
+
+      &-title {
+        padding-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      &-text {
+        padding-bottom: 2.2rem;
+        font-size: 1rem;
+      }
+
+      &-link {
+        font-size: 0.9rem;
+      }
+    }
+
+    &__hours {
+  
+      &-title {
+        font-size: 2rem;
+      }
+  
+      &-days,
+      &-time {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include mobile{
+  .details {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__content {
+      padding-right: 0;
+      align-items: center;
+
+      &-title {
+        padding-bottom: 1rem;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      
+      &-info {
+        padding-bottom: 0.4rem;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      &-text {
+        padding-bottom: 1.8rem;
+        font-size: 1rem;
+      }
+
+      &-link {
+        font-size: 0.9rem;
+      }
+    }
+
+    &__hours {
+      padding-left: 0;
+      border-left: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      &-title {
+        padding-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+  
+      &-days,
+      &-time {
+        font-size: 1rem;
+      }
+
+      &-tine {
+        margin-bottom: 1.4rem;
+      }
+
+      &-time:last-child {
+        margin-bottom: 0;
+      }
+
     }
   }
 }
