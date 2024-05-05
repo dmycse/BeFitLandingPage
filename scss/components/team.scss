@@ -22,6 +22,10 @@
       font-size: 1.1rem;
       text-align: justify;
       color: $color-grey-light;
+
+      &:last-child {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -63,6 +67,10 @@
         font-weight: bolder;
         color: $color-grey-dark;
         cursor: pointer;
+
+        &:hover {
+          color: $color-active;
+        }
       }
     }
 
@@ -80,14 +88,15 @@
 // team media styles
 @include desktop{
   .team {
-    padding: 2rem;
+    padding: 2rem 2rem 0rem;
+    margin-bottom: 3rem;
 
     &__about {
       margin-right: 2.5rem;
       flex: 0 1 50%;
 
       &-title {
-        padding-bottom: 1.4rem;
+        padding-bottom: 1.2rem;
         font-size: 2.2rem;
       }
 
@@ -102,15 +111,19 @@
 @include laptop{
   .team {
     padding: 2rem;
-    height: initial;
     flex-direction: column;
+
+    // for anchor ->
+    margin-top: -30px;
+    padding-top: 70px;
+    // <--
     
 
     &__about {
       margin: 0px 0px 20px 0px;
 
       &-title {
-        padding-bottom: 1.4rem;
+        padding-bottom: 1.2rem;
         font-size: 1.8rem;
         text-align: center;
       }
@@ -122,17 +135,18 @@
 
     &__coaches {
       max-width: 50rem;
+      justify-content: center;
       gap: 2rem;
     }
 
     &__coach {
-      flex: 0 1 48%;
+      flex: 0 1 40%;
 
       &-name {
         padding: 5px 10px 0 10px;
 
         h4 {
-          font-size: 1.1rem;
+          font-size: 1.2rem;
         }
 
         i {
@@ -169,6 +183,7 @@
 
 @include mobile{
   .team {
+    height: initial;
 
     &__about {
       &-title {
@@ -180,10 +195,14 @@
     &__coaches {
       max-width: 25rem;
       flex-direction: column;
+      align-items: center;
       gap: 1.5rem;
     }
 
     &__coach {
+      max-width: 20rem;
+
+
       &-name,
       &-position {
     

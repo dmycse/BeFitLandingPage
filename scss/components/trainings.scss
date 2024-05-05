@@ -2,6 +2,11 @@
 .trainings {
   padding: 3rem 8rem;
   height: 100vh;
+
+  // for anchor ->
+  margin-top: -50px;
+  padding-top: 90px;
+  // <--
   
   display: flex;
   flex-direction: column;
@@ -105,7 +110,8 @@
 // trainings media styles
 @include laptop{
   .trainings {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0rem;
+    margin-bottom: 4rem;
 
     &__intro {
       padding-bottom: 0.5rem;
@@ -159,6 +165,11 @@
     padding: 2rem;
     height: initial;
     justify-content: flex-start;
+
+    // for anchor ->
+    margin-top: -30px;
+    padding-top: 70px;
+    // <--
 
     &__intro {
       padding-bottom: 0.1rem;

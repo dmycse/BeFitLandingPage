@@ -156,7 +156,9 @@
 
 @include mobile{
   .details {
+    margin-bottom: 2rem;
     padding: 2rem;
+    height: initial;
     flex-direction: column;
     gap: 2rem;
 
