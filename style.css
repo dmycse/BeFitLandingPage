@@ -440,35 +440,75 @@ html {
   height: auto;
   background-color: #fff;
   box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.1), 0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02), 0 35px 80px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+.team__coach-front {
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 0.6s linear;
+}
+.team__coach:hover > .team__coach-front {
+  transform: rotateY(-180deg);
 }
 .team__coach img {
   width: 100%;
   object-fit: cover;
 }
-.team__coach-name, .team__coach-position {
-  padding: 5px 20px 0 20px;
-  display: flex;
-  justify-content: space-between;
+.team__coach-details {
+  padding: 1rem;
+  text-align: center;
 }
-.team__coach-name h4, .team__coach-position h4 {
-  font-size: 1.5rem;
+.team__coach-details h4 {
+  font-size: 1.4rem;
   color: #171819;
 }
-.team__coach-name i, .team__coach-position i {
-  font-size: 1.3rem;
-  font-weight: bolder;
+.team__coach-details p {
+  font-size: 1.2rem;
   color: #666262;
+}
+.team__coach-back {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  backface-visibility: hidden;
+  transition: transform 0.6s linear;
+  background-color: #fff;
+  overflow-y: auto;
+  border-bottom: 0.5rem solid transparent;
+}
+.team__coach-back h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+.team__coach-back p {
+  margin-top: 0.7rem;
+  height: fit-content;
+  font-size: 0.9rem;
+  text-align: justify;
+  color: #666262;
+}
+.team__coach:hover > .team__coach-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0deg);
+}
+.team__coach-social {
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
   cursor: pointer;
 }
-.team__coach-name i:hover, .team__coach-position i:hover {
+.team__coach-social i:hover {
   color: #ff5733;
-}
-.team__coach-name i {
-  align-self: center;
-}
-.team__coach-position p {
-  padding-bottom: 15px;
-  color: #666262;
 }
 
 @media (max-width: 1200px) {
@@ -486,6 +526,14 @@ html {
   }
   .team__about-content {
     font-size: 1rem;
+  }
+  .team__coach-back h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .team__coach-back p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 1024px) {
@@ -514,29 +562,32 @@ html {
   .team__coach {
     flex: 0 1 40%;
   }
-  .team__coach-name {
-    padding: 5px 10px 0 10px;
-  }
-  .team__coach-name h4 {
+  .team__coach-details h4 {
     font-size: 1.2rem;
   }
-  .team__coach-name i {
+  .team__coach-details p {
     font-size: 0.9rem;
   }
-  .team__coach-position {
-    padding: 5px 10px 0 10px;
+  .team__coach-back h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
   }
-  .team__coach-position p {
-    font-size: 0.9rem;
-  }
-  .team__coach-position i {
-    padding-top: 5px;
+  .team__coach-back p {
+    margin-top: 0.5rem;
     font-size: 0.9rem;
   }
 }
 @media (max-width: 767px) {
   .team__about-title {
     font-size: 1.8rem;
+  }
+  .team__coach-back h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .team__coach-back p {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 576px) {
@@ -556,14 +607,17 @@ html {
   .team__coach {
     max-width: 20rem;
   }
-  .team__coach-name h4, .team__coach-position h4 {
+  .team__coach-details h4 {
     font-size: 1.8rem;
   }
-  .team__coach-name i, .team__coach-position i {
-    font-size: 1.5rem;
-  }
-  .team__coach-position p {
+  .team__coach-details p {
     font-size: 1rem;
+  }
+  .team__coach-back h4 {
+    font-size: 1rem;
+  }
+  .team__coach-back p {
+    font-size: 0.9rem;
   }
 }
 .trainings {
