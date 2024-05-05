@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Be@Fit Fitness Studio</title>
 </head>
@@ -12,10 +13,10 @@
     <h2 class="header__title">Be@Fit Fitness Studio</h2>
     <nav id="menu" class="header__nav">
       <ul class="header__nav-links">
-        <li><a href="#" class="header__nav-link">Home</a></li>
-        <li><a href="#" class="header__nav-link">About Us</a></li>
-        <li><a href="#" class="header__nav-link">Classes</a></li>
-        <li><a href="#" class="header__nav-link">Contact</a></li>
+        <li><a href="#banner" class="header__nav-link">Home</a></li>
+        <li><a href="#team" class="header__nav-link">About Us</a></li>
+        <li><a href="#trainings" class="header__nav-link">Classes</a></li>
+        <li><a href="#contact" class="header__nav-link">Contact</a></li>
       </ul>
       <div class="header__nav-social">
         <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -26,7 +27,7 @@
     <i id="bars" class="fa fa-bars" aria-hidden="true"></i>
   </header>
   <main>
-    <section class="banner">
+    <section id="banner" class="banner">
       <div class="banner__overlay"></div>
       <article class="banner__content">
         <p class="banner__content-intro">new way to build a healthy lifestyle!</p>
@@ -37,14 +38,14 @@
         </div>
       </article>
     </section>
-    <section class="details">
+    <section id="details" class="details">
       <article class="details__content">
-        <h3 class="details__content-title">New to the Be@Fit?</h3>
-        <h6 class="details__content-info">Your membership is up to 2 months FREE (&#8364;60 per month)</h6>
-        <p class="details__content-text">The many years of experience and the impeccable professional training of our members, always combined with quality, consistency, pioneering and ethics, make Be@Fit one of the best Fitness and Well Being centers.</p>
-        <a href="#" class="details__content-link">Become a member today</a>
+        <h3 class="details__content-title" data-aos="fade-up" >New to the Be@Fit?</h3>
+        <h6 class="details__content-info" data-aos="fade-up">Your membership is up to 2 months FREE (&#8364;60 per month)</h6>
+        <p class="details__content-text" data-aos="fade-up">The many years of experience and the impeccable professional training of our members, always combined with quality, consistency, pioneering and ethics, make Be@Fit one of the best Fitness and Well Being centers.</p>
+        <a href="#" class="details__content-link" data-aos="fade-up">Become a member today</a>
       </article>
-      <article class="details__hours">
+      <article class="details__hours" data-aos="fade-up">
         <h3 class="details__hours-title">Working hours</h3>
         <h5 class="details__hours-days">Sunday: Closed</h5>
         <h5 class="details__hours-days">Monday - Thursday</h5>
@@ -53,22 +54,22 @@
         <p class="details__hours-time">08:00 - 00:00</p>
       </article>
     </section>
-    <section class="team">
+    <section id="team" class="team">
       <article class="team__about">
-        <h2 class="team__about-title">Hello, we are Be@Fit</h2>
-        <p class="team__about-content">
+        <h2 class="team__about-title" data-aos="fade-up">Hello, we are Be@Fit</h2>
+        <p class="team__about-content" data-aos="fade-up">
           The Be@Fit team consists of physical education teachers and coaches 
           who have starred in international sporting events as athletes and coaches 
           and people with expertise in their subject and a passion for exercise.
-          <br>
-          <br>
+        </p>
+        <p class="team__about-content" data-aos="fade-up">
           Guided by scientific knowledge and everyone's love for sports, the Be@Fit team 
           aims to transmit its experience and passion, to inspire, motivate and create 
           the conditions that will help every athlete to achieve their goals.
         </p>
       </article>
       <article class="team__coaches">
-        <div class="team__coach">
+        <div class="team__coach" data-aos="fade-up">
           <div class="team-coach-img">
             <img src="/assets/team1.jpg" alt="coach">
           </div>
@@ -83,7 +84,7 @@
             </div>
           </div>
         </div>
-        <div class="team__coach">
+        <div class="team__coach" data-aos="fade-up">
           <div class="team-coach-img">
             <img src="/assets/team2.jpg" alt="coach">
           </div>
@@ -100,11 +101,11 @@
         </div>
       </article>
     </section>
-    <section class="trainings">
-      <p class="trainings__intro">Get a perfect body!</p>
-      <h2 class="trainings__title">Our training classes</h2>
+    <section id="trainings" class="trainings">
+      <p class="trainings__intro" data-aos="fade-up">Get a perfect body!</p>
+      <h2 class="trainings__title" data-aos="fade-up">Our training classes</h2>
       <article class="trainings__cards">
-        <div class="training">
+        <div class="training" data-aos="fade-up">
           <div class="training__img">
             <img src="./assets/class1.jpg" alt="">
           </div>
@@ -124,7 +125,7 @@
           </div>
 
         </div>
-        <div class="training">
+        <div class="training" data-aos="fade-up">
           <div class="training__img">
             <img src="./assets/class2.jpg" alt="">
           </div>
@@ -143,7 +144,7 @@
             </div>
           </div>
         </div>
-        <div class="training">
+        <div class="training" data-aos="fade-up">
           <div class="training__img">
             <img src="./assets/class3.jpg" alt="">
           </div>
@@ -164,17 +165,17 @@
         </div>
       </article>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
       <article class="contact__form">
-        <h2 class="contact__form-title">Feel free to ask us</h2>
-        <form class="contact__form-details">
+        <h2 class="contact__form-title" data-aos="fade-up">Feel free to ask us</h2>
+        <form class="contact__form-details" data-aos="fade-up">
           <input type="text" name="" placeholder="Name">
           <input type="email" name="" placeholder="Email">
           <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
           <button type="submit">Send</button>
         </form>
       </article>
-      <article class="contact__map">
+      <article class="contact__map" data-aos="fade-up">
         <h2>Where you can find us</h2>
         <p>
           <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -208,6 +209,8 @@
       </article>
     </footer>
   </main>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({offset: 200, duration: 1000});</script>
   <script src="index.js"></script>
 </body>
 </html>
