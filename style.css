@@ -130,7 +130,7 @@ html {
 }
 .banner {
   height: 100vh;
-  background-image: url("../../assets/bg.jpg");
+  background-image: url("./assets/bg.jpg");
   background-color: #000;
   background-position: center;
   background-size: cover;
