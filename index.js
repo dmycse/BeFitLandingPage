@@ -2,6 +2,7 @@ function handleBars() {
 
   let menu = document.getElementById('menu');
   let bars = document.getElementById('bars');
+  let links = document.querySelectorAll('.header__nav-link');
 
   menu.style.right = '-250px';
   
@@ -15,8 +16,15 @@ function handleBars() {
     }
   }
 
-
   bars.addEventListener('click', barsClickHandle);
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.style.right = '-250px';
+      bars.style.color = '#ff5733';
+    })
+  });
+
 }
 
 
