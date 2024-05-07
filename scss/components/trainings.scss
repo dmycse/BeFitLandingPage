@@ -4,8 +4,8 @@
   height: 100vh;
 
   // for anchor ->
-  margin-top: -50px;
-  padding-top: 90px;
+  // margin-top: -30px;
+  padding-top: 70px;
   // <--
   
   display: flex;
@@ -16,7 +16,7 @@
   background-color: $color-white;
 
   &__intro {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.3rem;
@@ -24,17 +24,58 @@
   }
 
   &__title {
-    padding-bottom: 50px;
+    padding-bottom: 2rem;
     text-align: center;
     font-size: 2.2rem;
     font-weight: 700;
     color: $color-black-dark;
   }
 
+  &__slider-nav {
+    padding-bottom: 1.6rem;
+    display: inline-flex;
+    justify-content: center;
+    gap: 4rem; 
+  }
+
+  &__nav-btn {
+    width: 3rem;
+    height: 1rem;
+    border: none;
+    outline: none;
+    background-color: $color-grey-dark;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-active;
+      opacity: 0.5;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $color-active;
+      opacity: 1;
+    }
+  }
+
+  &__nav-active {
+    background-color: $color-active;
+    opacity: 1;
+  }
+
+  &__cardlist {
+    height: 30rem;
+  }
+
   &__cards {
-    flex: 0 1 55%;
+    display: none;
+  }
+
+  &__active {
+    // flex: 0 1 55%;
     display: flex;
-    gap: 3rem;
+    gap: 3rem; 
   }
 }
 
@@ -55,9 +96,8 @@
   }
 
   &__details {
-    padding: 5px 20px 10px 20px;
+    padding: 10px;
     
-
     &-info {
       padding-bottom: 10px;
       display: flex;
@@ -108,19 +148,57 @@
 }
 
 // trainings media styles
-@include laptop{
-  .trainings {
-    padding: 4rem 2rem 0rem;
-    margin-bottom: 4rem;
+@include desktop {
+  .trainings { 
+    &__title {
+      padding-bottom: 2rem;
+      font-size: 2rem;
+    }
 
     &__intro {
       padding-bottom: 0.5rem;
       font-size: 1.1rem;
     }
 
-    &__title {
-      padding-bottom: 4rem;
-      font-size: 2rem;
+    &__cardlist {
+      height: 24rem;
+    }
+  }
+
+  .training {
+    &__details {
+  
+      &-name {
+        padding: 5px;
+
+        h4 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+
+      &-price {
+        h5 {
+          width: 2.5rem;
+          height: 2.5rem;
+          font-size: 0.8rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include laptop{
+  .trainings {
+    padding: 4rem 2rem 0rem;
+    margin-bottom: 4rem;
+
+    &__cardlist {
+      height: 23rem;
     }
   }
 
@@ -140,7 +218,7 @@
         }
 
         p {
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
       }
 
@@ -167,7 +245,7 @@
     justify-content: flex-start;
 
     // for anchor ->
-    margin-top: -30px;
+    // margin-top: -30px;
     padding-top: 70px;
     // <--
 
@@ -181,7 +259,7 @@
       font-size: 1.5rem;
     }
 
-    &__cards {
+    &__cardlist {
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
