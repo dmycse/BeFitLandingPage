@@ -320,10 +320,10 @@
     <section id="contact" class="contact">
       <article class="contact__form">
         <h2 class="contact__form-title" data-aos="fade-up">Feel free to ask us</h2>
-        <form class="contact__form-details" data-aos="fade-up">
-          <input type="text" name="" placeholder="Name">
-          <input type="email" name="" placeholder="Email">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+        <form class="contact__form-details" name='contactForm' data-aos="fade-up">
+          <input type="text" name="contactName" placeholder="Name">
+          <input type="email" name="contactEmail" placeholder="Email">
+          <textarea name="contactText" id="" cols="30" rows="10" placeholder="Message"></textarea>
           <button type="submit">Send</button>
         </form>
       </article>
@@ -363,6 +363,6 @@
   </main>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init({offset: 200, duration: 1000});</script>
-  <script src="./index.js"></script>
+  <script deffer src="./index.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ function handleBars() {
     });
   }
 
-
+  // header mobile view ->
   menu.style.right = '-250px';
   
   let barsClickHandle = () => {
@@ -46,7 +46,9 @@ function handleBars() {
     })
   });
 }
+// <--
 
+// training classes slider ->
 function initTrainigsSlider() {
   let sliderBtns = document.querySelector('.trainings__slider-nav');
   let trainingsCards = document.querySelectorAll('.trainings__cardlist');
@@ -85,6 +87,41 @@ function initTrainigsSlider() {
       })
     });
   }
+  // <--
+
+
+  // form handling
+  let form = document.forms.contactForm;
+  let formElems =  Array.from(form.elements);
+
+  function formValidation() {
+    let checked = {empty: 0};
+
+    formElems.forEach(elem => {
+      if (elem.value === '' && elem.type !== 'submit') {
+        elem.style.border = '1px solid red';
+        checked.empty += 1;
+      }
+    });
+  
+    return checked.empty === 0;
+  }
+
+  form.oninput = (e) => {
+    formElems.forEach(elem => elem.value !== '' && (elem.style.border = '1px solid black'));
+  }
+
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    
+    if (formValidation()) {
+      console.table(form.contactName.value, form.contactEmail.value, form.contactText.value);
+      formElems.forEach(elem => elem.value = '');
+    }
+
+    return;
+  }
+  // <--
 }
 
 
